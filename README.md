@@ -69,7 +69,9 @@ http://localhost:8000/auth/token/login
 ```
 http://localhost:8000/auth/users/
 ```
+##### 3. after use postman and follow the following screenshot
 
+![alt](img/postmanget.png)
 
 ### If you're running into issues:
 contact me on [twitter](https://www.twitter.com/harshsahu97/)

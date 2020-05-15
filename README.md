@@ -1,11 +1,18 @@
 # django auth
 
+A basic Django backend which lets user login,logout and signup and save data in SQLite database. User authorization is also implemented.
 
 
 ### How to Run?
 
 #### PreRequisites
   * [Python ~3.7](https://www.python.org/)
+  
+#### Important **pip** packages used in this app
+  * [django](https://pypi.org/project/Django/)
+  * [djoser](https://pypi.org/project/djoser/0.4.1/)
+  * [django-rest-frameworlk](https://pypi.org/project/django-rest-framework/)
+
   
 #### Setup Project:
 #####  1. Clone or Download the project and `cd` into the `django-auth/` folder.
@@ -62,17 +69,41 @@
   ```
 #### Instructions
 ##### 1. for login
+
+```
+$curl -X POST http://127.0.0.1:8000/auth/token/login/ --data 'email=my@email.com&password=my_password'
+```
+or  
+
 ```
 http://localhost:8000/auth/token/login
 ```
+**COPY THE TOKEN**
+
 ##### 2. for signup
+```
+$ curl -X POST http://127.0.0.1:8000/auth/users/ --data 'username=MYCOOLUSERNAME&password=my_password&re_password=my_password&first_name=Harsh&last_name=Sahu&email=my@email.com'
+
+```
+OR
 ```
 http://localhost:8000/auth/users/
 ```
-##### 3. after use postman and follow the following screenshot
+##### 3. Visit authorised route
+```
+curl -LX GET http://127.0.0.1:8000/auth/restricted/ -H 'Authorization: Token <YOUR TOKEN HERE>'
+```
+OR
+after use postman and follow the following screenshot
 
 ![alt](img/postmanget.png)
-if it says `only for logged in users` it means you're logged in successfully!
+
+**if it says `only for logged in user` it means you're logged in successfully!**
+
+##### 4. Logout
+```
+curl -X POST http://127.0.0.1:8000/auth/token/logout/ -H 'Authorization: Token <YOUR TOKEN HERE>'
+```
 
 ### If you're running into issues:
 contact me on [twitter](https://www.twitter.com/harshsahu97/)

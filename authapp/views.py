@@ -6,6 +6,6 @@ from rest_framework.response import Response
 
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticatedde])
+@permission_classes([IsAuthenticated])
 def restricted(request, *args, **kwargs):
     return Response(data="only for logged in user", status=status.HTTP_200_OK)

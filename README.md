@@ -72,6 +72,7 @@ http://localhost:8000/auth/users/
 ##### 3. after use postman and follow the following screenshot
 
 ![alt](img/postmanget.png)
+if it says `only for logged in users' it means you're logged in successfully!
 
 ### If you're running into issues:
 contact me on [twitter](https://www.twitter.com/harshsahu97/)

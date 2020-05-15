@@ -78,8 +78,8 @@ or
 ```
 http://localhost:8000/auth/token/login
 ```
-**COPY THE TOKEN**
-
+**!!!!! MAKE SURE TO COPY THE TOKEN !!!!!**
+ 
 #### 2. for signup
 ```
 $ curl -X POST http://127.0.0.1:8000/auth/users/ --data 'username=MYCOOLUSERNAME&password=my_password&re_password=my_password&first_name=Harsh&last_name=Sahu&email=my@email.com'

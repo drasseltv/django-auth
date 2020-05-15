@@ -62,13 +62,13 @@ A basic Django backend which lets user login,logout and signup and save data in 
   $ pip install -r requirements.txt
   ```
 
-#### Launch Project
+### Launch Project
 #####  1. run the app using command:
   ```
   $ python manage.py runserver
   ```
-#### Instructions
-##### 1. for login
+### Instructions
+#### 1. for login
 
 ```
 $curl -X POST http://127.0.0.1:8000/auth/token/login/ --data 'email=my@email.com&password=my_password'
@@ -80,7 +80,7 @@ http://localhost:8000/auth/token/login
 ```
 **COPY THE TOKEN**
 
-##### 2. for signup
+#### 2. for signup
 ```
 $ curl -X POST http://127.0.0.1:8000/auth/users/ --data 'username=MYCOOLUSERNAME&password=my_password&re_password=my_password&first_name=Harsh&last_name=Sahu&email=my@email.com'
 
@@ -89,7 +89,7 @@ OR
 ```
 http://localhost:8000/auth/users/
 ```
-##### 3. Visit authorised route
+#### 3. Visit authorised route
 ```
 curl -LX GET http://127.0.0.1:8000/auth/restricted/ -H 'Authorization: Token <YOUR TOKEN HERE>'
 ```
@@ -100,7 +100,7 @@ after use postman and follow the following screenshot
 
 **if it says `only for logged in user` it means you're logged in successfully!**
 
-##### 4. Logout
+#### 4. Logout
 ```
 curl -X POST http://127.0.0.1:8000/auth/token/logout/ -H 'Authorization: Token <YOUR TOKEN HERE>'
 ```

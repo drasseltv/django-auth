@@ -11,7 +11,7 @@ A basic Django backend which lets user login,logout and signup and save data in 
 #### Important **pip** packages used in this app
   * [django](https://pypi.org/project/Django/)
   * [djoser](https://pypi.org/project/djoser/0.4.1/)
-  * [django-rest-frameworlk](https://pypi.org/project/django-rest-framework/)
+  * [django-rest-framework](https://pypi.org/project/django-rest-framework/)
 
   
 #### Setup Project:
